@@ -24,7 +24,7 @@ services:
 
   frontend:
     image: denisjquphp/foodgram_frontend:latest
-    # restart: always
+    restart: always
     volumes:
       - ../frontend/:/app/result_build/
     depends_on:
