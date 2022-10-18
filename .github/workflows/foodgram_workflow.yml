@@ -69,7 +69,7 @@ jobs:
           cd /home/foodgram/
           sudo docker pull denisjquphp/foodgram_backend:latest
           sudo docker pull denisjquphp/foodgram_frontend:latest
-          cd infra/
+          cd /home/foodgram/infra/
           sudo docker-compose down
           sudo docker-compose rmi backend
           sudo docker-compose rmi frontend
@@ -85,7 +85,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         script: |
           cd /home/foodgram/
-          cd infra/
+          cd /home/foodgram/infra/
           sudo touch .env
           echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
           echo DB_NAME=${{ secrets.DB_NAME }} >> .env
