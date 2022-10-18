@@ -64,10 +64,9 @@ jobs:
           cd /home/foodgram/
           sudo docker pull denisjquphp/foodgram_backend:latest
           sudo docker pull denisjquphp/foodgram_frontend:latest
+
           cd /home/foodgram/infra/
           sudo docker-compose down
-          sudo docker rmi backend
-          sudo docker rmi frontend
     - name: docker-compose up
       uses: appleboy/ssh-action@master
       with:
